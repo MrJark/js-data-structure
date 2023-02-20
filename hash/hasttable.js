@@ -9,7 +9,7 @@ class HastTable {
         }
         return hash;
     }
-    set() {//método para agregar elementos al hash
+    set(key, value) {//método para agregar elementos al hash
         const address = this.hashMethod(key);
         if(!this.data[address]) {
             this.data[address] = [];
@@ -17,6 +17,17 @@ class HastTable {
         this.data[address].push([key, value]);
         return this.data;
     }
-        
+    get(key) { //para obtener los valores del hash a través de darle la key
+        const address = this.hashMethod(key);
+        const currentBucket = this.data[address];
+        if(currentBucket) {
+            for(let i= 0; i < currentBucket.lenght; i++) {
+                if(currentBucket[i][0] === key) {
+                    return currentBucket[i][1];
+                }
+            }
+        }
+        return undefined;
+    }   
 }
 const myHashTable = new HashTable(50);
