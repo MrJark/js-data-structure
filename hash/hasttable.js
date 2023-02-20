@@ -29,5 +29,18 @@ class HastTable {
         }
         return undefined;
     }   
+    delete(key){// reto que no he podido completar
+        const address = this.hashMethod(key)
+        const currentBucket = this.data[address]
+        if (currentBucket) {
+          for (let i = 0; i < currentBucket.length; i++) {
+            if (currentBucket[i][0] === key) {
+              let arrDeletedItems = currentBucket.splice(i, 1)
+              return arrDeletedItems[0];
+            }
+          }
+        }
+        return undefined;
+    }
 }
 const myHashTable = new HashTable(50);
