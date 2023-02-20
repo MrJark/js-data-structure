@@ -73,4 +73,3 @@ const myArray = new MyArray();
 //Datos:
 
 //cada método, le sigue un paréntesis y dentro de este puede, o no, haber un item, o un index. Esto es la manera con la que llamamos a los métodos, es decir, si queremos llamar al método 'get' lo haremos: myArray.get('index') Esro nos devuelve el elemento que haya en ese index, en el caso de .push() tenemos que darle el item, no un index.
-
