@@ -34,7 +34,7 @@ class MyArray {
         delete this.data[this.length - 1];
         this.length--;
     }
-    unshift(item){
+    unshift(item){ //Reto /no lo completé
         if(!item){
           return this.length;
         }
@@ -51,6 +51,21 @@ class MyArray {
         this.length++;
         return this.length;
     }
+    shift(){ // reto / lo completé mal
+        if(this.length === 0){
+          return undefined
+        }
+    
+        const itemDeleted = this.data[0]
+    
+        for (let i = 0; i < this.length - 1; i++) {
+          this.data[i] = this.data[i + 1]
+        }
+    
+        this.length--
+        delete this.data[this.length]
+        return itemDeleted
+    }
 }
 
 const myArray = new MyArray();
@@ -58,3 +73,4 @@ const myArray = new MyArray();
 //Datos:
 
 //cada método, le sigue un paréntesis y dentro de este puede, o no, haber un item, o un index. Esto es la manera con la que llamamos a los métodos, es decir, si queremos llamar al método 'get' lo haremos: myArray.get('index') Esro nos devuelve el elemento que haya en ese index, en el caso de .push() tenemos que darle el item, no un index.
+
