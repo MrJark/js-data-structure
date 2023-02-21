@@ -1,0 +1,4 @@
+Linked List: son un conjunto de nodos ordenados que contienen los valores que necesitemos (numbers, strings, boolean, etc). Cada uno tiene un valor y una referencia a un siguiente nodo. Es como se pueden guardar los datos en la memoria. Muy parecido a como funciona la blockchain, cada uno hace referencia al siguiente y tiene el valor de su anterior.
+
+Estas estructuras empiezan con un head, entre medias tienen valores y acaba con un tail o cola y el siguiente valor a la cola es un null, para dejar un espacio al siguiente elemento cuando lo añada.
+
